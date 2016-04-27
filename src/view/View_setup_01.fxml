@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox prefHeight="487.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller_setup_01">
+   <children>
+      <Pane prefHeight="487.0" prefWidth="659.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="textFieldName" layoutX="55.0" layoutY="10.0" prefHeight="25.0" prefWidth="257.0" promptText="Give your mashing program a name" />
+            <Label layoutX="15.0" layoutY="55.0" text="Description">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextArea fx:id="textAreaDescription" layoutX="15.0" layoutY="72.0" prefHeight="198.0" prefWidth="295.0" promptText="Describe your mashing program, or if your new to beer-brewing, open an existing one!" />
+            <GridPane layoutX="16.0" layoutY="283.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="61.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="139.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Parameters">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="10.0" layoutY="60.0" text="Integral (I)" GridPane.rowIndex="2" />
+                  <Label layoutX="10.0" layoutY="99.0" text="Memory" GridPane.rowIndex="3" />
+                  <Label layoutX="10.0" layoutY="21.0" text="Proportional (P)" GridPane.rowIndex="1" />
+                  <Label layoutX="10.0" layoutY="110.0" text="Max Output" GridPane.rowIndex="4" />
+                  <HBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label fx:id="labelProportional" text="0" />
+                        <Label text=" Units" />
+                     </children>
+                  </HBox>
+                  <HBox GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="labelIntegral" text="0" />
+                        <Label text=" Units" />
+                     </children>
+                  </HBox>
+                  <HBox GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Label fx:id="labelMemory" text="1" />
+                        <Label text=" min" />
+                     </children>
+                  </HBox>
+                  <HBox GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <Label fx:id="labelMaxOutput" text="100" />
+                        <Label text=" %" />
+                     </children>
+                  </HBox>
+                  <Label text="PWM Period" GridPane.rowIndex="5" />
+                  <HBox GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <Label fx:id="labelPeriod" text="1" />
+                        <Label text=" s" />
+                     </children>
+                  </HBox>
+                  <Slider fx:id="sliderProportional" max="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Slider fx:id="sliderIntegral" max="10.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Slider fx:id="sliderMemory" max="10.0" min="1.0" value="1.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Slider fx:id="sliderMaxOutput" value="100.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Slider fx:id="sliderPeriod" max="10.0" min="1.0" value="1.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Separator orientation="VERTICAL" prefHeight="200.0" />
+      <Pane layoutX="10.0" layoutY="10.0" prefHeight="487.0" prefWidth="764.0">
+         <children>
+            <VBox prefHeight="487.0" prefWidth="432.0">
+               <children>
+                  <HBox />
+                  <HBox />
+                  <HBox />
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="125.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0" minWidth="10.0" prefWidth="49.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="258.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="25.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="41.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="46.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="56.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Pane>
+                           <children>
+                              <Label text="Step 1">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                           </children>
+                        </Pane>
+                        <Label prefHeight="17.0" prefWidth="114.0" text="Goal temperature" GridPane.rowIndex="1" />
+                        <Slider fx:id="sliderStep1Goal" max="105.0" prefHeight="14.0" prefWidth="277.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label prefHeight="17.0" prefWidth="114.0" text="Reach temperature" GridPane.rowIndex="2" />
+                        <Slider fx:id="sliderStep1Reach" max="105.0" prefHeight="14.0" prefWidth="277.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label prefHeight="17.0" prefWidth="114.0" text="Duration" GridPane.rowIndex="3" />
+                        <Slider fx:id="sliderStep1Duration" max="60.0" prefHeight="14.0" prefWidth="277.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label fx:id="labelStep1Goal" text="0" />
+                              <Label text="*C" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Label fx:id="labelStep1Reach" text="0" />
+                              <Label text="*C" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Label fx:id="labelStep1Duration" text="0" />
+                              <Label text=" min" />
+                           </children>
+                        </HBox>
+                        <Pane GridPane.columnIndex="2">
+                           <children>
+                              <Label layoutY="2.0" text="Min" />
+                              <Label layoutX="227.0" layoutY="2.0" text="Max" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </GridPane>
+                  <Separator prefHeight="8.0" prefWidth="432.0" />
+                  <GridPane layoutX="10.0" layoutY="10.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="125.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0" minWidth="10.0" prefWidth="49.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="258.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="25.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="41.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="46.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="56.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Pane>
+                           <children>
+                              <Label text="Step 2">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                           </children>
+                        </Pane>
+                        <Label prefHeight="17.0" prefWidth="114.0" text="Goal temperature" GridPane.rowIndex="1" />
+                        <Slider fx:id="sliderStep2Goal" max="105.0" prefHeight="14.0" prefWidth="277.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label prefHeight="17.0" prefWidth="114.0" text="Reach temperature" GridPane.rowIndex="2" />
+                        <Slider fx:id="sliderStep2Reach" max="105.0" prefHeight="14.0" prefWidth="277.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label prefHeight="17.0" prefWidth="114.0" text="Duration" GridPane.rowIndex="3" />
+                        <Slider fx:id="sliderStep2Duration" max="60.0" prefHeight="14.0" prefWidth="277.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label fx:id="labelStep2Goal" text="0" />
+                              <Label text="*C" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Label fx:id="labelStep2Reach" text="0" />
+                              <Label text="*C" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Label fx:id="labelStep2Duration" text="0" />
+                              <Label text=" min" />
+                           </children>
+                        </HBox>
+                        <Pane GridPane.columnIndex="2">
+                           <children>
+                              <Label layoutY="2.0" text="Min" />
+                              <Label layoutX="227.0" layoutY="2.0" text="Max" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </GridPane>
+                  <Separator layoutX="10.0" layoutY="90.0" prefHeight="8.0" prefWidth="267.0" />
+                  <GridPane layoutX="10.0" layoutY="104.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="125.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0" minWidth="10.0" prefWidth="49.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="258.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="25.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="41.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="46.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="56.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Step 3">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label prefHeight="17.0" prefWidth="114.0" text="Goal temperature" GridPane.rowIndex="1" />
+                        <Slider fx:id="sliderStep3Goal" max="105.0" prefHeight="14.0" prefWidth="277.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label prefHeight="17.0" prefWidth="114.0" text="Reach temperature" GridPane.rowIndex="2" />
+                        <Slider fx:id="sliderStep3Reach" max="105.0" prefHeight="14.0" prefWidth="277.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label prefHeight="17.0" prefWidth="114.0" text="Duration" GridPane.rowIndex="3" />
+                        <Slider fx:id="sliderStep3Duration" max="60.0" prefHeight="14.0" prefWidth="277.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label fx:id="labelStep3Goal" text="0" />
+                              <Label text="*C" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Label fx:id="labelStep3Reach" text="0" />
+                              <Label text="*C" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Label fx:id="labelStep3Duration" text="0" />
+                              <Label text=" min" />
+                           </children>
+                        </HBox>
+                        <Pane GridPane.columnIndex="2">
+                           <children>
+                              <Label layoutY="2.0" text="Min" />
+                              <Label layoutX="227.0" layoutY="2.0" text="Max" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </GridPane>
+                  <Separator layoutX="10.0" layoutY="184.0" prefHeight="8.0" prefWidth="432.0" />
+                  <GridPane layoutX="10.0" layoutY="198.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="125.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0" minWidth="10.0" prefWidth="49.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="258.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="25.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="41.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="46.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="56.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Step 4">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label prefHeight="17.0" prefWidth="114.0" text="Goal temperature" GridPane.rowIndex="1" />
+                        <Slider fx:id="sliderStep4Goal" max="105.0" prefHeight="14.0" prefWidth="277.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label prefHeight="17.0" prefWidth="114.0" text="Reach temperature" GridPane.rowIndex="2" />
+                        <Slider fx:id="sliderStep4Reach" max="105.0" prefHeight="14.0" prefWidth="277.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label prefHeight="17.0" prefWidth="114.0" text="Duration" GridPane.rowIndex="3" />
+                        <Slider fx:id="sliderStep4Duration" max="60.0" prefHeight="14.0" prefWidth="277.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label fx:id="labelStep4Goal" text="0" />
+                              <Label text="*C" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Label fx:id="labelStep4Reach" text="0" />
+                              <Label text="*C" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Label fx:id="labelStep4Duration" text="0" />
+                              <Label text=" min" />
+                           </children>
+                        </HBox>
+                        <Pane GridPane.columnIndex="2">
+                           <children>
+                              <Label layoutY="2.0" text="Min" />
+                              <Label layoutX="227.0" layoutY="2.0" text="Max" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </GridPane>
+                  <Separator layoutX="10.0" layoutY="278.0" prefHeight="8.0" prefWidth="432.0" />
+                  <GridPane layoutX="10.0" layoutY="292.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="125.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0" minWidth="10.0" prefWidth="49.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="258.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="25.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="41.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="46.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="56.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Step 5">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label prefHeight="17.0" prefWidth="114.0" text="Goal temperature" GridPane.rowIndex="1" />
+                        <Slider fx:id="sliderStep5Goal" max="105.0" prefHeight="14.0" prefWidth="277.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label prefHeight="17.0" prefWidth="114.0" text="Reach temperature" GridPane.rowIndex="2" />
+                        <Slider fx:id="sliderStep5Reach" max="105.0" prefHeight="14.0" prefWidth="277.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label prefHeight="17.0" prefWidth="114.0" text="Duration" GridPane.rowIndex="3" />
+                        <Slider fx:id="sliderStep5Duration" max="60.0" prefHeight="14.0" prefWidth="277.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label fx:id="labelStep5Goal" text="0" />
+                              <Label text="*C" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Label fx:id="labelStep5Reach" text="0" />
+                              <Label text="*C" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Label fx:id="labelStep5Duration" text="0" />
+                              <Label text=" min" />
+                           </children>
+                        </HBox>
+                        <Pane GridPane.columnIndex="2">
+                           <children>
+                              <Label layoutY="2.0" text="Min" />
+                              <Label layoutX="227.0" layoutY="2.0" text="Max" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </GridPane>
+                  <Separator layoutX="10.0" layoutY="354.0" prefHeight="8.0" prefWidth="432.0" />
+                  <Pane>
+                     <children>
+                        <Button fx:id="btnGraph" layoutX="3.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="426.0" text="Generate Graph">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</HBox>

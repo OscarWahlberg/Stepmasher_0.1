@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller_root_01">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menuItemOpen" mnemonicParsing="false" text="Open" />
+                  <MenuItem fx:id="menuItemSave" mnemonicParsing="false" text="Save" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About Step Masher" />
+                  <MenuItem mnemonicParsing="false" text="About beer and mashing" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Separator prefWidth="200.0" />
+            <Pane prefHeight="25.0">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+               <children>
+                  <Label layoutY="4.0" text="Stepmasher 0.1" />
+                  <Label layoutX="337.0" layoutY="4.0" text="Happy Brewing" />
+                  <Label layoutX="635.0" layoutY="4.0" text="Wahlberg Corporation" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
